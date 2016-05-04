@@ -15,7 +15,8 @@ set shiftwidth=2
 set expandtab
 
 " Enable mouse. Great for resizing windows and keeping co-workers sane.
-set mouse=a
+"set mouse=a
+set mouse=r
 
 " Disable swap files.
 set noswapfile
@@ -28,6 +29,9 @@ set completeopt-=preview
 
 " Make session files minimal.
 set sessionoptions=blank,curdir,folds,help,tabpages,winsize
+
+" Toggle paste mode
+set pastetoggle=<F2>
 
 " Improve encryption.
 "set cryptmethod=blowfish2
