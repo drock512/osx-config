@@ -3,7 +3,7 @@
 set backspace=indent,eol,start
 
 " Enable invisible characters.
-set list
+"set list
 
 " More natural splitting.
 set splitbelow
