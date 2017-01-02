@@ -92,6 +92,16 @@ To update VM with new config changes
 > vagrant provision
 ```
 
+To shutdown the VM
+```
+> vagrant halt
+```
+
+To access command line on VM
+```
+> vagrant ssh
+```
+
 ## MySQL
 MySQL database
 

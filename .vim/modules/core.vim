@@ -2,14 +2,21 @@
 " plugins depend on it during start up.
 set backspace=indent,eol,start
 
+" Fix issue with webpack hot module replacement
+"set backupcopy=yes
+
 " Enable invisible characters.
-"set list
+set list
 
 " More natural splitting.
 set splitbelow
 set splitright
 
+" Write files as they are, don't mess with line endings etc.
+set binary
+
 " Set a default indent, but vim-sleuth should adjust it.
+"set softtabstop=2
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -20,9 +27,6 @@ set mouse=r
 
 " Disable swap files.
 set noswapfile
-
-" Write files as they are, don't mess with line endings etc.
-set binary
 
 " Disable the completion preview window.
 set completeopt-=preview

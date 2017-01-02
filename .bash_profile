@@ -29,6 +29,7 @@
 #   ------------------------------------------------------------
     #export PATH="$PATH:/usr/local/bin/"
     #export PATH="/usr/local/git/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+    export PATH="/usr/local/Cellar/node/6.0.0/lib:$PATH"
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -215,6 +216,9 @@ alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on 
 alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
 alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
+alias sshgbs='ssh -i ~/.ssh/geebeesoftware-vps-dmcneill-private.pem -p 7822 dmcneill@geebeesoftware.com'
+alias sshgbsroot='ssh -i ~/.ssh/geebeesoftware-vps-private.pem -p 7822 root@geebeesoftware.com'
+
 #   ii:  display useful host related informaton
 #   -------------------------------------------------------------------
     ii() {
@@ -304,3 +308,4 @@ httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grab
 #   10.  GIT COMMANDS
 #   -------------------------------
 gitreview() { git checkout -b "$@" "origin/$@"; }  # checkout a branch for review
+alias gitRemoveMerged='git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d'  # removes all local branches that have been merged
